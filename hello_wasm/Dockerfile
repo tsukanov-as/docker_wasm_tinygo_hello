@@ -8,7 +8,7 @@ RUN openssl s_client -showcerts -connect proxy.golang.org:443 </dev/null 2>/dev/
 RUN update-ca-certificates
 
 COPY ./src /src
-RUN cd /src && tinygo build -o tinygo_hello.wasm -target wasm main.go
+RUN cd /src && tinygo build -o tinygo_hello.wasm -target wasi main.go
 
 FROM scratch
 COPY --from=build /src/tinygo_hello.wasm /app.wasm
