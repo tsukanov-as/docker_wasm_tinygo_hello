@@ -8,7 +8,8 @@
 
 ## Reading list
 0. https://hacks.mozilla.org/2019/03/standardizing-wasi-a-webassembly-system-interface/
-1. https://wazero.io/languages/tinygo/
-2. https://tinygo.org/docs/reference/lang-support/stdlib/
-3. https://github.com/tinygo-org/tinygo/issues/2704
-4. https://github.com/golang/go/issues/58141
+1. https://wazero.io/specs/#wasi
+2. https://wazero.io/languages/tinygo/
+3. https://tinygo.org/docs/reference/lang-support/stdlib/
+4. https://github.com/tinygo-org/tinygo/issues/2704
+5. https://github.com/golang/go/issues/58141
