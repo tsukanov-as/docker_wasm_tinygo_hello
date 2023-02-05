@@ -12,8 +12,17 @@ func main() {
 	clock_time_get(0, 1000, &ns) // direct wasi-libc api call example (see: https://github.com/WebAssembly/wasi-libc/blob/8f5275796a82f8ecfd0833a4f3f444fa37ed4546/libc-bottom-half/sources/__wasilibc_real.c#L86)
 
 	fmt.Println("Time from WASI: ", time.Unix(0, int64(ns)))
+
+	var buf [10]byte
+	random_get(&buf[0], int32(len(buf)))
+
+	fmt.Println("Random from WASI: ", buf)
 }
 
 //go:wasm-module wasi_snapshot_preview1
 //export clock_time_get
 func clock_time_get(clockid uint32, precision uint64, time *uint64) (errno uint16)
+
+//go:wasm-module wasi_snapshot_preview1
+//export random_get
+func random_get(buf *byte, len int32) (errno uint16)
