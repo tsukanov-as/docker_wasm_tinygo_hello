@@ -7,6 +7,7 @@
 4. `docker-compose up --build`
 
 ## Reading list
+0. https://hacks.mozilla.org/2019/03/standardizing-wasi-a-webassembly-system-interface/
 1. https://wazero.io/languages/tinygo/
 2. https://tinygo.org/docs/reference/lang-support/stdlib/
 3. https://github.com/tinygo-org/tinygo/issues/2704
