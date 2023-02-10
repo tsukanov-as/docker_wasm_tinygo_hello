@@ -12,4 +12,4 @@ RUN cd /src && tinygo build -o tinygo_hello.wasm -target wasi main.go
 
 FROM scratch
 COPY --from=build /src/tinygo_hello.wasm /app.wasm
-ENTRYPOINT [ "app.wasm" ]
+ENTRYPOINT [ "app.wasm", "-myarg" ]

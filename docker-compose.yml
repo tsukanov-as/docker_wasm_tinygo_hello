@@ -3,3 +3,5 @@ services:
     build: ./hello_wasm
     platform: wasi/wasm32
     runtime: io.containerd.wasmedge.v1
+    ports:
+      - 8080:8080
